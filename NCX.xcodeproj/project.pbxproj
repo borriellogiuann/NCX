@@ -13,6 +13,7 @@
 		BCD5F71B2BB17A61002ECA61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCD5F7192BB17A61002ECA61 /* Main.storyboard */; };
 		BCD5F71D2BB17A62002ECA61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCD5F71C2BB17A62002ECA61 /* Assets.xcassets */; };
 		BCD5F7202BB17A62002ECA61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCD5F71E2BB17A62002ECA61 /* LaunchScreen.storyboard */; };
+		BCD5F7282BB18BBC002ECA61 /* JSONModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD5F7272BB18BBC002ECA61 /* JSONModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		BCD5F71C2BB17A62002ECA61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BCD5F71F2BB17A62002ECA61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BCD5F7212BB17A62002ECA61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCD5F7272BB18BBC002ECA61 /* JSONModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				BCD5F7132BB17A61002ECA61 /* AppDelegate.swift */,
 				BCD5F7152BB17A61002ECA61 /* SceneDelegate.swift */,
 				BCD5F7172BB17A61002ECA61 /* ViewController.swift */,
+				BCD5F7272BB18BBC002ECA61 /* JSONModel.swift */,
 				BCD5F7192BB17A61002ECA61 /* Main.storyboard */,
 				BCD5F71C2BB17A62002ECA61 /* Assets.xcassets */,
 				BCD5F71E2BB17A62002ECA61 /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCD5F7182BB17A61002ECA61 /* ViewController.swift in Sources */,
+				BCD5F7282BB18BBC002ECA61 /* JSONModel.swift in Sources */,
 				BCD5F7142BB17A61002ECA61 /* AppDelegate.swift in Sources */,
 				BCD5F7162BB17A61002ECA61 /* SceneDelegate.swift in Sources */,
 			);

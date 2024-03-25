@@ -8,12 +8,48 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let countryName = "Italy" //Esempio Iniziale
+        asyncFetchCountryData(countryName: countryName)
     }
-
-
+    
+    func asyncFetchCountryData(countryName: String) {
+        Task {
+            do {
+                let (data, _) = try await URLSession.shared.data(from: URL(string: "https://restcountries.com/v2/name/\(countryName)")!)
+                let countries = try JSONDecoder().decode([Country].self, from: data)
+                for country in countries {
+                    print("Country Name: \(country.name)")
+                    print("Top Level Domain: \(country.topLevelDomain)")
+                    print("Alpha2Code: \(country.alpha2Code)")
+                    print("Alpha3Code: \(country.alpha3Code)")
+                    print("Calling Codes: \(country.callingCodes)")
+                    print("Capital: \(country.capital)")
+                    print("Alt Spellings: \(country.altSpellings)")
+                    print("Region: \(country.region)")
+                    print("Subregion: \(country.subregion)")
+                    print("Population: \(country.population)")
+//                  print("Latlng: \(country.latlng)")
+//                  print("Demonym: \(country.demonym)")
+//                  print("Area: \(country.area)")
+//                  print("Gini: \(country.gini)")
+                    print("Timezones: \(country.timezones)")
+                    print("Borders: \(country.borders)")
+                    print("Native Name: \(country.nativeName)")
+//                  print("Numeric Code: \(country.numericCode)")
+                    print("Currencies: \(country.currencies)")
+                    print("Languages: \(country.languages)")
+//                  print("Translations: \(country.translations)")
+                    print("Flag: \(country.flag)")
+//                  print("Regional Blocs: \(country.regionalBlocs)")
+//                  print("CIOC: \(country.cioc)")
+                }
+            } catch {
+                print("Error: \(error)")
+            }
+        }
+    }
 }
-
