@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		BCC761DD2BB2BBA200176990 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC761DC2BB2BBA200176990 /* ViewModel.swift */; };
+		BCC761DF2BB2D38B00176990 /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC761DE2BB2D38B00176990 /* CountryTableViewCell.swift */; };
+		BCC761E12BB2D65800176990 /* CountryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC761E02BB2D65800176990 /* CountryTableViewController.swift */; };
 		BCD5F7142BB17A61002ECA61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD5F7132BB17A61002ECA61 /* AppDelegate.swift */; };
 		BCD5F7162BB17A61002ECA61 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD5F7152BB17A61002ECA61 /* SceneDelegate.swift */; };
 		BCD5F7182BB17A61002ECA61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD5F7172BB17A61002ECA61 /* ViewController.swift */; };
@@ -19,6 +21,8 @@
 
 /* Begin PBXFileReference section */
 		BCC761DC2BB2BBA200176990 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		BCC761DE2BB2D38B00176990 /* CountryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewCell.swift; sourceTree = "<group>"; };
+		BCC761E02BB2D65800176990 /* CountryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewController.swift; sourceTree = "<group>"; };
 		BCD5F7102BB17A61002ECA61 /* NCX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NCX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCD5F7132BB17A61002ECA61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCD5F7152BB17A61002ECA61 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 				BCC761DC2BB2BBA200176990 /* ViewModel.swift */,
 				BCD5F7272BB18BBC002ECA61 /* JSONModel.swift */,
 				BCD5F7192BB17A61002ECA61 /* Main.storyboard */,
+				BCC761E02BB2D65800176990 /* CountryTableViewController.swift */,
+				BCC761DE2BB2D38B00176990 /* CountryTableViewCell.swift */,
 				BCD5F71C2BB17A62002ECA61 /* Assets.xcassets */,
 				BCD5F71E2BB17A62002ECA61 /* LaunchScreen.storyboard */,
 				BCD5F7212BB17A62002ECA61 /* Info.plist */,
@@ -144,11 +150,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCC761DF2BB2D38B00176990 /* CountryTableViewCell.swift in Sources */,
 				BCD5F7182BB17A61002ECA61 /* ViewController.swift in Sources */,
 				BCD5F7282BB18BBC002ECA61 /* JSONModel.swift in Sources */,
 				BCD5F7142BB17A61002ECA61 /* AppDelegate.swift in Sources */,
 				BCD5F7162BB17A61002ECA61 /* SceneDelegate.swift in Sources */,
 				BCC761DD2BB2BBA200176990 /* ViewModel.swift in Sources */,
+				BCC761E12BB2D65800176990 /* CountryTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
