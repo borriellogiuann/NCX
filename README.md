@@ -27,7 +27,7 @@ Welcome to NanoGlobe, your go-to app for exploring information about countries a
 ## Future Plans
 
 - **Play Flag Guessing Game:** Challenge yourself by tapping on the flag guessing game option in the app. Test your knowledge and see how many flags you can correctly identify!
-- 
+  
 - **SearchBar for simplified exploration:** With a SearchBar, everything about exploring new countries will be much easier!
 
 ## Feedback
