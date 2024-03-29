@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BCC380FE2BB7274000CA647A /* CountryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC380FD2BB7274000CA647A /* CountryDetailViewController.swift */; };
 		BCC761DD2BB2BBA200176990 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC761DC2BB2BBA200176990 /* ViewModel.swift */; };
 		BCC761DF2BB2D38B00176990 /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC761DE2BB2D38B00176990 /* CountryTableViewCell.swift */; };
 		BCC761E12BB2D65800176990 /* CountryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC761E02BB2D65800176990 /* CountryTableViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BCC380FD2BB7274000CA647A /* CountryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailViewController.swift; sourceTree = "<group>"; };
 		BCC761DC2BB2BBA200176990 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		BCC761DE2BB2D38B00176990 /* CountryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewCell.swift; sourceTree = "<group>"; };
 		BCC761E02BB2D65800176990 /* CountryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				BCD5F7192BB17A61002ECA61 /* Main.storyboard */,
 				BCC761E02BB2D65800176990 /* CountryTableViewController.swift */,
 				BCC761DE2BB2D38B00176990 /* CountryTableViewCell.swift */,
+				BCC380FD2BB7274000CA647A /* CountryDetailViewController.swift */,
 				BCD5F71C2BB17A62002ECA61 /* Assets.xcassets */,
 				BCD5F71E2BB17A62002ECA61 /* LaunchScreen.storyboard */,
 				BCD5F7212BB17A62002ECA61 /* Info.plist */,
@@ -156,6 +159,7 @@
 				BCD5F7142BB17A61002ECA61 /* AppDelegate.swift in Sources */,
 				BCD5F7162BB17A61002ECA61 /* SceneDelegate.swift in Sources */,
 				BCC761DD2BB2BBA200176990 /* ViewModel.swift in Sources */,
+				BCC380FE2BB7274000CA647A /* CountryDetailViewController.swift in Sources */,
 				BCC761E12BB2D65800176990 /* CountryTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,6 +315,8 @@
 				DEVELOPMENT_TEAM = 85TW94Y6A7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NCX/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NanoGlobe;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -339,6 +345,8 @@
 				DEVELOPMENT_TEAM = 85TW94Y6A7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NCX/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NanoGlobe;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

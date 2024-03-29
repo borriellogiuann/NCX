@@ -44,7 +44,7 @@ class CountryTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "countryCell", for: indexPath) as! CountryTableViewCell
         let country = countries[indexPath.row]
-        cell.countryImageView.image = UIImage(named: country.flag ?? "noimage")
+        cell.countryImageView.image = UIImage(named: "placeholder.png")
         cell.countryLabel.text = country.name?.common
         return cell
     }
@@ -53,4 +53,13 @@ class CountryTableViewController: UITableViewController {
         return 80
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detailSegue" {
+            let destination = segue.destination as! CountryDetailViewController
+            if let index = tableView.indexPathForSelectedRow?.row {
+                let country = countries[index]
+                destination.country = country
+            }
+        }
+    }
 }

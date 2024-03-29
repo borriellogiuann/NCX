@@ -1,6 +1,7 @@
 import Foundation
 
 struct Country: Codable {
+    
     struct Name: Codable {
         let common: String?
         let official: String?
