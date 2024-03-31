@@ -14,6 +14,7 @@ class ViewModel: ObservableObject {
     @Published var country: [Country] = []
     
     func asyncFetchCountryData() async {
+        self.country.removeAll()
         
         do {
             let (data, _) = try await URLSession.shared.data(from: URL(string: "https://restcountries.com/v3.1/all")!)
@@ -21,6 +22,7 @@ class ViewModel: ObservableObject {
             for country in countries {
                 self.country.append(country)
             }
+            self.country.sort { $0.name?.common ?? "test" < $1.name?.common ?? "test2"}
         } catch {
             print("Error: \(error)")
         }

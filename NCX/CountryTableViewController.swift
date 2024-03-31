@@ -10,11 +10,17 @@ import SwiftUI
 
 class CountryTableViewController: UITableViewController {
     
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     @ObservedObject var viewModel = ViewModel()
     var countries: [Country] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchBar.delegate = self
+        searchBar.placeholder = "Search for a country"
+        searchBar.sizeToFit()
+        tableView.tableHeaderView = searchBar
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -22,7 +28,7 @@ class CountryTableViewController: UITableViewController {
             await viewModel.asyncFetchCountryData()
             await MainActor.run {
                 self.countries = viewModel.country
-                self.tableView.reloadData() // Reload table view data on the main thread
+                self.tableView.reloadData()
             }
         }
     }
@@ -61,5 +67,17 @@ class CountryTableViewController: UITableViewController {
                 destination.country = country
             }
         }
+    }
+}
+
+extension CountryTableViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if !searchText.isEmpty {
+            countries = viewModel.country.filter { $0.name?.common?.lowercased().contains(searchText.lowercased()) == true }
+            tableView.reloadData()
+        } else {
+            countries = viewModel.country
+        }
+        tableView.reloadData()
     }
 }

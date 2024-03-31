@@ -11,7 +11,6 @@ import SwiftUI
 class CountryDetailViewController: UIViewController {
     
     @IBOutlet weak var countryImage: UIImageView! //Not added yet
-    @IBOutlet weak var countryName: UILabel!
     @IBOutlet weak var countryCapital: UILabel!
     @IBOutlet weak var countryRegion: UILabel!
     @IBOutlet weak var countryPopulation: UILabel!
@@ -27,7 +26,6 @@ class CountryDetailViewController: UIViewController {
         
         navigationItem.title = country?.name?.common
         
-        countryName.text = country?.name?.common
         countryCapital.text = country?.capital?.first
         countryRegion.text = country?.region
         countryPopulation.text = country?.population?.description
