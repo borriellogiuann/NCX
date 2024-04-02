@@ -8,8 +8,6 @@ Welcome to NanoGlobe, your go-to app for exploring information about countries a
 
 - **Country Details:** Click on any country to view detailed information including its capital, population, area, language, currency, and more.
 
-- **Flag Guessing Game:** Challenge yourself by playing the flag guessing game! Test your ability to recognize flags from different countries.
-
 ## Technologies Used
 
 - **RESTCountries API:** The app utilizes the RESTCountries API to fetch information about countries, ensuring that the data is always up-to-date and accurate.
@@ -27,8 +25,6 @@ Welcome to NanoGlobe, your go-to app for exploring information about countries a
 ## Future Plans
 
 - **Play Flag Guessing Game:** Challenge yourself by tapping on the flag guessing game option in the app. Test your knowledge and see how many flags you can correctly identify!
-  
-- **SearchBar for simplified exploration:** With a SearchBar, everything about exploring new countries will be much easier!
 
 ## Feedback
 
