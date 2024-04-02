@@ -34,8 +34,8 @@ struct Country: Codable {
     }
     
     struct Flags: Codable {
-        let png: URL?
-        let svg: URL?
+        let png: String?
+        let svg: String?
         let alt: String?
     }
     

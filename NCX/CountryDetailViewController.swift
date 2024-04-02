@@ -18,7 +18,7 @@ class CountryDetailViewController: UIViewController {
     @IBOutlet weak var countryLanguages: UILabel! //Not added yet
     @IBOutlet weak var countryBorders: UILabel! //Not added yet
     @IBOutlet weak var countryTimezones: UILabel! //Not added yet
-              
+    
     var country: Country?
     
     override func viewDidLoad() {
@@ -26,21 +26,19 @@ class CountryDetailViewController: UIViewController {
         
         navigationItem.title = country?.name?.common
         
+        if let flags = country?.flags, let pngURLString = flags.png, let url = URL(string: pngURLString) {
+            URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
+                if let data = data {
+                    DispatchQueue.main.async {
+                        self?.countryImage.image = UIImage(data: data)
+                    }
+                }
+            }.resume()
+        }
+        
         countryCapital.text = country?.capital?.first
         countryRegion.text = country?.region
         countryPopulation.text = country?.population?.description
         
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
