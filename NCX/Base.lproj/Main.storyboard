@@ -286,11 +286,11 @@
             </objects>
             <point key="canvasLocation" x="533.58778625954199" y="7.746478873239437"/>
         </scene>
-        <!--Flag Generator-->
+        <!--Random Flag-->
         <scene sceneID="UuU-CN-JSZ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="brO-EC-8rX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Flag Generator" image="flag" catalog="system" id="OVG-5V-laj"/>
+                    <tabBarItem key="tabBarItem" title="Random Flag" image="flag" catalog="system" id="OVG-5V-laj"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3i3-1q-KZ4">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
