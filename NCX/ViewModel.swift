@@ -21,9 +21,8 @@ class ViewModel: ObservableObject {
             let countries = try JSONDecoder().decode([Country].self, from: data)
             for country in countries {
                 self.country.append(country)
-                print (country.flags?.png)
             }
-            self.country.sort { $0.name?.common ?? "test" < $1.name?.common ?? "test2"}
+            self.country.sort { $0.name?.common ?? "error" < $1.name?.common ?? "error"}
         } catch {
             print("Error: \(error)")
         }

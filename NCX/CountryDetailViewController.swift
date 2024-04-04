@@ -10,22 +10,24 @@ import SwiftUI
 
 class CountryDetailViewController: UIViewController {
     
-    @IBOutlet weak var countryImage: UIImageView! //Not added yet
+    @IBOutlet weak var countryImage: UIImageView!
+    
     @IBOutlet weak var countryCapital: UILabel!
     @IBOutlet weak var countryRegion: UILabel!
     @IBOutlet weak var countryPopulation: UILabel!
-    @IBOutlet weak var countryCurrency: UILabel! //Not added yet
-    @IBOutlet weak var countryLanguages: UILabel! //Not added yet
-    @IBOutlet weak var countryBorders: UILabel! //Not added yet
-    @IBOutlet weak var countryTimezones: UILabel! //Not added yet
+    @IBOutlet weak var countryCurrency: UILabel!
+    @IBOutlet weak var countryLanguages: UILabel!
+    @IBOutlet weak var countryBorders: UILabel!
+    @IBOutlet weak var countryTimezones: UILabel!
+    
+    @IBOutlet weak var scrollView: UIScrollView!
     
     var country: Country?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = country?.name?.common
-        
+        scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.width*2)
         if let flags = country?.flags, let pngURLString = flags.png, let url = URL(string: pngURLString) {
             URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
                 if let data = data {
@@ -36,9 +38,14 @@ class CountryDetailViewController: UIViewController {
             }.resume()
         }
         
-        countryCapital.text = country?.capital?.first
-        countryRegion.text = country?.region
-        countryPopulation.text = country?.population?.description
+        self.navigationItem.title = country?.name?.common
         
+        countryCapital.text = country?.capital?.first ?? "No Capital"
+        countryRegion.text = country?.region ?? "No Region"
+        countryPopulation.text = "\(country?.population ?? 0)"
+        countryCurrency.text = country?.currencies?.first?.value.name ?? "No Currencies"
+        countryLanguages.text = country?.languages?.keys.joined(separator: ", ") ?? "No Languages"
+        countryBorders.text = country?.borders?.joined(separator: ", ") ?? "No Borders"
+        countryTimezones.text = country?.timezones?.joined(separator: ", ") ?? "No Timezones"
     }
 }

@@ -49,8 +49,18 @@ class CountryTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "countryCell", for: indexPath) as! CountryTableViewCell
         let country = countries[indexPath.row]
-        cell.countryImageView.image = UIImage(named: "placeholder.png")
+        
         cell.countryLabel.text = country.name?.common
+        
+        if let flags = country.flags, let pngURLString = flags.png, let url = URL(string: pngURLString) {
+                    URLSession.shared.dataTask(with: url) { [weak cell] data, response, error in
+                        guard let data = data, let image = UIImage(data: data) else { return }
+                        DispatchQueue.main.async {
+                            cell?.countryImageView.image = image
+                        }
+                    }.resume()
+                }
+        
         return cell
     }
     
@@ -64,6 +74,7 @@ class CountryTableViewController: UITableViewController {
             if let index = tableView.indexPathForSelectedRow?.row {
                 let country = countries[index]
                 destination.country = country
+                destination.hidesBottomBarWhenPushed = true
             }
         }
     }
@@ -80,3 +91,10 @@ extension CountryTableViewController: UISearchBarDelegate {
         tableView.reloadData()
     }
 }
+
+extension CountryTableViewController {
+    override func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        searchBar.resignFirstResponder()
+    }
+}
+

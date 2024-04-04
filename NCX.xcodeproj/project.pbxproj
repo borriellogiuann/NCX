@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC076AF42BBEB06800F18AFF /* FlagGeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC076AF32BBEB06800F18AFF /* FlagGeneratorViewController.swift */; };
 		BCC380FE2BB7274000CA647A /* CountryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC380FD2BB7274000CA647A /* CountryDetailViewController.swift */; };
 		BCC761DD2BB2BBA200176990 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC761DC2BB2BBA200176990 /* ViewModel.swift */; };
 		BCC761DF2BB2D38B00176990 /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC761DE2BB2D38B00176990 /* CountryTableViewCell.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC076AF32BBEB06800F18AFF /* FlagGeneratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagGeneratorViewController.swift; sourceTree = "<group>"; };
 		BCC380FD2BB7274000CA647A /* CountryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailViewController.swift; sourceTree = "<group>"; };
 		BCC761DC2BB2BBA200176990 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		BCC761DE2BB2D38B00176990 /* CountryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewCell.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				BCC761E02BB2D65800176990 /* CountryTableViewController.swift */,
 				BCC761DE2BB2D38B00176990 /* CountryTableViewCell.swift */,
 				BCC380FD2BB7274000CA647A /* CountryDetailViewController.swift */,
+				BC076AF32BBEB06800F18AFF /* FlagGeneratorViewController.swift */,
 				BCD5F71C2BB17A62002ECA61 /* Assets.xcassets */,
 				BCD5F71E2BB17A62002ECA61 /* LaunchScreen.storyboard */,
 				BCD5F7212BB17A62002ECA61 /* Info.plist */,
@@ -153,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC076AF42BBEB06800F18AFF /* FlagGeneratorViewController.swift in Sources */,
 				BCC761DF2BB2D38B00176990 /* CountryTableViewCell.swift in Sources */,
 				BCD5F7182BB17A61002ECA61 /* ViewController.swift in Sources */,
 				BCD5F7282BB18BBC002ECA61 /* JSONModel.swift in Sources */,
