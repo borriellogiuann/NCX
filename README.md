@@ -7,6 +7,8 @@ Welcome to NanoGlobe, your go-to app for exploring information about countries a
 - **Country List:** Browse through an extensive list of countries from all over the globe.
 
 - **Country Details:** Click on any country to view detailed information including its capital, population, area, language, currency, and more.
+  
+- **Random Flag Generator:** Visit "Random Flag" section to generate random flags and its country name.
 
 ## Technologies Used
 
@@ -21,6 +23,8 @@ Welcome to NanoGlobe, your go-to app for exploring information about countries a
 2. **Browse Countries:** Scroll through the list to find the country you're interested in. Tap on any country to view its details.
 
 3. **Explore Country Details:** Once you've selected a country, explore various details such as its capital, population, area, language, currency, and more.
+   
+4. **Random Flag Generator:** Visit "Random Flag" section to generate random flags and its country name.
 
 ## Future Plans
 
